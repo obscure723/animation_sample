@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* keyframesの構文 */
+/* @keyframes アニメーションの名前(任意) {
+  0% {
+    開始時の設定
+  }
+
+  100% {
+    終了時時の設定
+  }
+} */
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: 0.5s;
+}
+
+.box1:hover {
+  background-color: aqua;
+  margin-left: 20px;
+}
+
+.box1:active {
+  background-color: blueviolet;
+}
+
+.box2 {
+  margin-top: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: 0.5s;
+}
+
+.box2:hover {
+  background-color: aqua;
+  transform: rotate(45deg);
+}
+
+.fadeinBox {
+  margin-top: 30px;
+  animation: fadeinSample 3s;
+  position: relative;
+}
+
+@keyframes fadeinSample {
+  0% {
+    opacity: 0;
+    top: 150px;
+    left: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+}
+
+.box3,
+.box4,
+.box5 {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  margin-top: 30px;
+  position: relative;
+  animation: move1 5s ease;
+}
+
+.box4 {
+  animation: move1 5s ease-in;
+}
+
+.box5 {
+  animation: move1 5s ease-in-out;
+}
+
+@keyframes move1 {
+  0%{
+    left: 0;
+  }
+
+  50%{
+    left: 800px;
+  }
+
+  100%{
+    left: 0;
+  }
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: orangered;
+  margin-top: 30px;
+  animation: ball 0.5s ease-in infinite alternate;
+  margin: 0 auto;
+}
+
+@keyframes ball {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    background-color: aqua;
+  }
+  40% {
+    background-color: brown;
+  }
+  100%{
+    transform: translateY(150px);
+    height: 95px;
+  }
+}
